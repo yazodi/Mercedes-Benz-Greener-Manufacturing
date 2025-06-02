@@ -1,0 +1,87 @@
+🚗 Proje Özeti
+Bu yarışmada amaç, farklı özelliklere sahip Mercedes-Benz araçlarının test tezgahında geçirdiği süreyi tahmin etmektir. Her araç, çeşitli konfigürasyonlara sahip olduğundan test süreleri değişiklik göstermektedir. Test süresinin azaltılması, hem üretim verimliliğini artırmakta hem de karbon emisyonlarını düşürerek çevresel etkileri azaltmaktadır
+
+
+📊 Veri Seti Özellikleri
+Özellik Sayısı: 378 sütun (8 kategorik, 369 ikili, 1 hedef değişken)
+
+Gözlem Sayısı: 4209 satır
+
+Hedef Değişken: y (saniye cinsinden test süresi)
+
+Veri Özellikleri: Özellik isimleri anonimdir (örneğin, X0, X1, ...)
+
+
+
+
+🧠 Makine Öğrenimi Yaklaşımı
+Bu problem, sürekli bir hedef değişkenin tahmin edilmesini gerektirdiğinden bir regresyon problemidir. Veri setinin yüksek boyutluluğu nedeniyle boyut indirgeme teknikleri (örneğin, PCA) ve güçlü regresyon algoritmaları (örneğin, XGBoost, Random Forest) kullanımı önerilmektedir.
+
+
+📈 Değerlendirme Metrikleri
+R² (R-kare): Modelin açıklayıcılığını ölçer.
+
+MSLE (Ortalama Kare Logaritmik Hata): Özellikle büyük sapmaların etkisini azaltmak için kullanılır.
+
+
+
+
+🎯 Neden Bu Proje?
+Gerçek Dünya Uygulaması: Otomotiv sektöründe test süreçlerinin optimizasyonu gibi pratik bir problemi ele alır.
+
+Yüksek Boyutlu Veri: Boyut indirgeme ve özellik mühendisliği konularında deneyim kazanma fırsatı sunar.
+
+Topluluk Desteği: Kaggle üzerinde birçok çözüm ve tartışma mevcuttur, bu da öğrenme sürecini destekler.
+
+Çevresel Katkı: Karbon emisyonlarının azaltılmasına yönelik bir projede yer almak motivasyon sağlar.
+
+
+
+
+Mercedes-Benz Greener Manufacturing yarışmasının kazananları, yüksek boyutlu ve anonimleştirilmiş verilerle çalışarak etkili makine öğrenimi stratejileri geliştirmişlerdir. Bu yarışmada öne çıkan bazı teknikler ve yaklaşımlar şunlardır:
+
+
+
+
+🧠 Kazananların Kullandığı Teknikler
+1. Boyut İndirgeme ve Özellik Seçimi
+Sabit ve Neredeyse Sabit Özelliklerin Kaldırılması: Veri setindeki bazı özellikler tüm örneklerde aynı değere sahipti. Bu tür özellikler modelin öğrenmesine katkı sağlamadığından çıkarıldı.
+
+Yüksek Korelasyonlu Özelliklerin Elenmesi: Birbirine yüksek derecede korelasyonlu özellikler tespit edilerek, bilgi fazlalığını önlemek amacıyla bazıları çıkarıldı.
+
+Principal Component Analysis (PCA): Özellikle anonimleştirilmiş ve yüksek boyutlu verilerde, PCA gibi tekniklerle boyut indirgeme uygulandı. Bu sayede modelin daha genel özellikleri öğrenmesi sağlandı.
+
+2. Modelleme ve Ensemble Yöntemleri
+XGBoost ve Random Forest: Bu güçlü algoritmalar, özellikle ağaç tabanlı modellerin performansını artırmak için kullanıldı.
+
+Model Averaging (Model Ortalaması): Farklı modellerin tahminleri birleştirilerek daha dengeli ve genelleştirilebilir sonuçlar elde edildi.
+
+3. Özellik Mühendisliği
+Kategorik Değişkenlerin Gruplandırılması: Özellikle X0 gibi kategorik değişkenlerde, benzer davranış sergileyen kategoriler gruplandırılarak modelin daha anlamlı ilişkiler öğrenmesi sağlandı.
+
+Yeni Özelliklerin Oluşturulması: Var olan özelliklerden türetilen yeni özelliklerle modelin performansı artırıldı.
+
+4. Model Değerlendirme ve Tuning
+R² Skoru: Modelin açıklayıcılığını ölçmek için R² skoru kullanıldı.
+
+Hiperparametre Ayarlamaları: Grid Search ve benzeri yöntemlerle modelin hiperparametreleri optimize edildi.
+
+
+
+ Daha Fazla Kaynak ve Örnekler
+Will Koehrsen'in Capstone Projesi: Bu kapsamlı çalışma, veri ön işleme, modelleme ve değerlendirme adımlarını detaylı bir şekilde ele alır.
+
+Nitish Sawant'ın Medium Yazısı: Veri hazırlama, özellik mühendisliği ve modelleme süreçlerini adım adım açıklar.
+
+GitHub Projeleri: Aşağıdaki GitHub depoları, farklı katılımcıların çözüm yaklaşımlarını ve kodlarını içerir:
+
+Rishi500/Mercedes-Benz-Greener-Manufacturing
+
+aakashkerawat/kaggle-mercedes-benz-greener-manufacturing
+
+chingcchen/kaggle_Mercedes-Benz
+
+
+Mercedes-Benz Greener Manufacturing projesinde yenilikçi bir çözüm sunmak istiyorsan, klasik yaklaşımların (XGBoost + PCA) ötesine geçen stratejiler geliştirmen çok etkileyici olur. İşte senin projen için yeni ve fark yaratabilecek teknik önerilerim:
+
+
